@@ -40,6 +40,8 @@
             this.clipboardBtn = new System.Windows.Forms.Button();
             this.resultPassword = new System.Windows.Forms.TextBox();
             this.removePswrdBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.openexplrBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -130,11 +132,34 @@
             this.removePswrdBtn.UseVisualStyleBackColor = true;
             this.removePswrdBtn.Click += new System.EventHandler(this.removePswrdBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.Location = new System.Drawing.Point(7, 227);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 26);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "ⓘ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // openexplrBtn
+            // 
+            this.openexplrBtn.Location = new System.Drawing.Point(41, 230);
+            this.openexplrBtn.Name = "openexplrBtn";
+            this.openexplrBtn.Size = new System.Drawing.Size(208, 23);
+            this.openexplrBtn.TabIndex = 11;
+            this.openexplrBtn.Text = "Open Database Directory";
+            this.openexplrBtn.UseVisualStyleBackColor = true;
+            this.openexplrBtn.Click += new System.EventHandler(this.openexplrBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 237);
+            this.ClientSize = new System.Drawing.Size(261, 258);
+            this.Controls.Add(this.openexplrBtn);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.removePswrdBtn);
             this.Controls.Add(this.resultPassword);
             this.Controls.Add(this.clipboardBtn);
@@ -166,6 +191,8 @@
         private System.Windows.Forms.Button clipboardBtn;
         private System.Windows.Forms.TextBox resultPassword;
         private System.Windows.Forms.Button removePswrdBtn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button openexplrBtn;
     }
 }
 

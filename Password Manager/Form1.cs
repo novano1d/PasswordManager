@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -167,6 +168,16 @@ namespace Password_Manager
             {
                 MessageBox.Show("This could result from an incorrect encryption key.", "Error Retrieving Password");
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is a basic open source password manager that encrypts and stores your passwords in a text file. The text file is stored in %AppData% in the Password Manager folder. It is a good idea to back this file up onto the cloud or elsewhere for redundency.\nThe key is used for encryption and decryption so it is advisable to keep the same encrpytion key for all your passwords.", "Information");
+        }
+
+        private void openexplrBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Password Manager"));
         }
     }
 }
