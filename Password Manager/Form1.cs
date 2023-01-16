@@ -39,6 +39,7 @@ namespace Password_Manager
                 if (!File.Exists(directory))
                 {
                     FileStream fs = new FileStream(directory, FileMode.CreateNew); //creates text file if it doesn't exist
+                    fs.Close();
                     return; //exits function since file didn't already exist and no passwords to read in
                 }
                 foreach (string line in System.IO.File.ReadLines(directory)) //if the file does exist this code will run and fill the listbox with the password list
@@ -95,6 +96,11 @@ namespace Password_Manager
                     if (keybox.Text.Length < 6)
                     {
                         MessageBox.Show("Encryption key should be at least 6 characters long!");
+                        return;
+                    }
+                    if (psswrdMap.ContainsKey(form2.nameText))
+                    {
+                        MessageBox.Show("A password with this name already exists!");
                         return;
                     }
                     string encryptedPsswrdTxt = AesOperation.EncryptString(form2.psswrdText, keybox.Text);
