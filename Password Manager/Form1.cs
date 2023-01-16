@@ -24,6 +24,7 @@ namespace Password_Manager
         private void Form1_Load(object sender, EventArgs e)
         {
             //sets properties here:
+            TopMost= true;
             keybox.PasswordChar = '*';
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
